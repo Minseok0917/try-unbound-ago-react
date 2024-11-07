@@ -12,6 +12,8 @@ const services = Object.freeze({
 });
 
 export const usePK = (name) => ({
-  get: () => services.get(name),
+  get current() {
+    return services.get(name);
+  },
   increment: () => services.increment(name),
 });
